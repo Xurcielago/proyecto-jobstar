@@ -1,0 +1,6 @@
+/* SplitScreen.css */
+.navbar {
+  display: flex; /* Enables Flexbox layout */
+  height: 10vh; /* Makes the container take full viewport height */
+  width: 100vw; /* Makes the container take full viewport width */
+}

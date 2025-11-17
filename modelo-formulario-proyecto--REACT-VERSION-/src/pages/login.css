@@ -1,0 +1,67 @@
+.split-screen-container {
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 90vh;
+  width: 100vw;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.left-panel {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.right-panel {
+  background-color: rgba(255, 255, 255, 0);
+  padding-right: 13rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.right-panel h2 {
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 0px 0px 5px #7c7c7c;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  color: black;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+  background: #fafafa;
+}
+
+.form-group input:focus {
+  outline: none;
+  color: black;
+  border-color: #6b7aff;
+  background: white;
+}

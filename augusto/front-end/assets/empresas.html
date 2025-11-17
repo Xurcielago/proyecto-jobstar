@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStarter - Soluciones para Empresas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .hero-pattern {
+            background-color: #1a202c;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .floating-icon {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .floating-icon {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-laptop-code text-2xl mr-2"></i>
+                    <span class="font-semibold text-xl">TechStarter</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-blue-300 transition duration-300">Inicio</a>
+                    <a href="paraEmpresas.html" class="text-blue-300 transition duration-300">Para Empresas</a>
+                    <a href="cuestionario.html" class="hover:text-blue-300 transition duration-300">Para Graduados</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button id="loginBtn"
+                        class="bg-white text-blue-900 px-4 py-2 rounded-lg font-medium hover:bg-blue-100 transition duration-300">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section para Empresas -->
+    <section class="hero-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                Encuentra el <span class="text-blue-400">talento tecnológico</span> que tu empresa necesita
+            </h1>
+            <p class="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Conectamos empresas innovadoras con los mejores recién graduados en tecnología,
+                simplificando el proceso de reclutamiento y reduciendo costos.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                    Publicar una Oferta <i class="fas fa-bullhorn ml-2"></i>
+                </button>
+                <button
+                    class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                    Contactar con Ventas <i class="fas fa-headset ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios para Empresas -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                ¿Por qué elegir TechStarter para tu empresa?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md text-center transition duration-300">
+                    <div
+                        class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto floating-icon">
+                        <i class="fas fa-money-bill-wave text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ahorro en Contratación</h3>
+                    <p class="text-gray-600">
+                        Reduce hasta un 40% los costos de reclutamiento en comparación con métodos tradicionales.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md text-center transition duration-300">
+                    <div
+                        class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto floating-icon">
+                        <i class="fas fa-bolt text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Proceso Ágil</h3>
+                    <p class="text-gray-600">
+                        Encuentra candidatos calificados en menos de 72 horas con nuestro sistema de matching
+                        inteligente.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md text-center transition duration-300">
+                    <div
+                        class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto floating-icon">
+                        <i class="fas fa-filter text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Filtros Avanzados</h3>
+                    <p class="text-gray-600">
+                        Filtra candidatos por habilidades técnicas, proyectos realizados y aptitudes específicas.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md text-center transition duration-300">
+                    <div
+                        class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-4 mx-auto floating-icon">
+                        <i class="fas fa-chart-line text-yellow-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Talento Fresco</h3>
+                    <p class="text-gray-600">
+                        Accede a profesionales con conocimientos actualizados y gran potencial de crecimiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona para empresas -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                Nuestro proceso para empresas
+            </h2>
+
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-bold text-xl">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Registro y Perfil de Empresa</h3>
+                                <p class="text-gray-600 mt-2">
+                                    Crea tu perfil corporativo y define las habilidades y competencias que buscas en los
+                                    candidatos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z'/%3E%3C/svg%3E"
+                        alt="Registro de empresa" class="w-full max-w-xs mx-auto">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-bold text-xl">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Publica Oportunidades</h3>
+                                <p class="text-gray-600 mt-2">
+                                    Crea ofertas de trabajo detalladas con los requisitos específicos y el perfil
+                                    deseado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/%3E%3C/svg%3E"
+                        alt="Publicar ofertas" class="w-full max-w-xs mx-auto">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-bold text-xl">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Recibe Candidatos Ideales</h3>
+                                <p class="text-gray-600 mt-2">
+                                    Nuestro algoritmo te presenta los candidatos mejor alineados con tus necesidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E"
+                        alt="Candidatos ideales" class="w-full max-w-xs mx-auto">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-bold text-xl">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Gestiona el Proceso</h3>
+                                <p class="text-gray-600 mt-2">
+                                    Programa entrevistas, evalúa candidatos y haz seguimiento de todo el proceso desde
+                                    nuestra plataforma.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z'/%3E%3C/svg%3E"
+                        alt="Gestión de proceso" class="w-full max-w-xs mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de Empresas -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                Empresas que confían en nosotros
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-blue-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">TechSolutions Inc.</h4>
+                            <p class="text-blue-600">Sector: Desarrollo Software</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Hemos contratado a 5 desarrolladores junior a través de TechStarter en los últimos 6 meses. La
+                        calidad del talento y la rapidez del proceso nos ha permitido crecer más rápido de lo previsto."
+                    </p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-green-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">StartupInnovation</h4>
+                            <p class="text-green-600">Sector: FinTech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Como startup, necesitábamos talento con ideas frescas y conocimientos actualizados. TechStarter
+                        nos conectó con graduados entusiastas que han aportado un valor incalculable."
+                    </p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-purple-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">DataTech Corp</h4>
+                            <p class="text-purple-600">Sector: Big Data</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "El filtrado por habilidades técnicas específicas nos ahorra mucho tiempo. Hemos encontrado
+                        candidatos con exactamente las competencias que necesitábamos para nuestros proyectos de data
+                        science."
+                    </p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">¿Listo para encontrar tu próximo talento?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Regístrate hoy y comienza a conectar con los mejores recién graduados en tecnología
+            </p>
+            <button
+                class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-100 transition duration-300">
+                Crear Cuenta Empresa <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">TechStarter</h4>
+                    <p class="text-gray-400">
+                        Conectando el talento del futuro con las oportunidades de hoy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-blue-300 hover:text-white transition duration-300">Para Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Para
+                                Graduados</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Términos y
+                                Condiciones</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Política de
+                                Privacidad</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                            <span class="text-gray-400">empresas@techstarter.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-blue-400"></i>
+                            <span class="text-gray-400">+34 912 345 678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                            <span class="text-gray-400">Madrid, España</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">
+                    © 2025 TechStarter. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

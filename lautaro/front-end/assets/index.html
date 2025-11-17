@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStarter - Conectando Talentos con Oportunidades</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .hero-pattern {
+        background-color: #1a202c;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23374151' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <i class="fas fa-laptop-code text-2xl mr-2"></i>
+            <span class="font-semibold text-xl">TechStarter</span>
+          </div>
+
+          <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:text-blue-300 transition duration-300"
+              >Inicio</a
+            >
+            <a href="paraEmpresas.html" class="hover:text-blue-300 transition duration-300"
+              >Para Empresas</a
+            >
+            <a href="cuestionario.html" class="hover:text-blue-300 transition duration-300"
+              >Para Graduados</a
+            >
+          </div>
+
+          <div class="flex items-center">
+            <button
+              id="loginBtn"
+              class="bg-white text-blue-900 px-4 py-2 rounded-lg font-medium hover:bg-blue-100 transition duration-300"
+            >
+              <i class="fas fa-sign-in-alt mr-2"></i>Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-20">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 flex flex-col justify-center">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Conectamos el <span class="text-blue-400">talento joven</span> con
+            las <span class="text-blue-400">oportunidades</span>
+          </h1>
+          <p class="text-xl mb-8 text-gray-200">
+            TechStarter es la plataforma donde empresas encuentran los mejores
+            recién graduados en software y los graduados consiguen su primera
+            experiencia laboral.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Soy Empresa <i class="fas fa-building ml-2"></i>
+            </button>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Soy Graduado <i class="fas fa-graduation-cap ml-2"></i>
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 mt-10 md:mt-0">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M21 4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H3V6h18v12z'/%3E%3Cpath fill='%233B82F6' d='M9.5 11.5h-3c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V12c0-.3-.2-.5-.5-.5zm0-4h-3c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V8c0-.3-.2-.5-.5-.5zm6 4h-3c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V12c0-.3-.2-.5-.5-.5zm0-4h-3c-.3 0-.5.2-.5.5v2c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V8c0-.3-.2-.5-.5-.5z'/%3E%3C/svg%3E"
+            alt="Plataforma de conexión laboral"
+            class="w-full max-w-md mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          ¿Cómo funciona TechStarter?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Para Graduados</h3>
+            <p class="text-gray-600">
+              Crea tu perfil, muestra tus proyectos y conecta con empresas que
+              buscan talento como el tuyo sin exigir experiencia previa.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-building text-green-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Para Empresas</h3>
+            <p class="text-gray-600">
+              Publica ofertas de trabajo, filtra candidatos por habilidades y
+              encuentra el talento fresco que tu empresa necesita.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Conexión</h3>
+            <p class="text-gray-600">
+              Nuestro sistema inteligente conecta automáticamente a empresas y
+              graduados según sus intereses y necesidades específicas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h3 class="text-5xl font-bold text-blue-700 mb-2">500+</h3>
+            <p class="text-gray-700 text-lg">Empresas registradas</p>
+          </div>
+          <div>
+            <h3 class="text-5xl font-bold text-blue-700 mb-2">2,300+</h3>
+            <p class="text-gray-700 text-lg">Graduados conectados</p>
+          </div>
+          <div>
+            <h3 class="text-5xl font-bold text-blue-700 mb-2">85%</h3>
+            <p class="text-gray-700 text-lg">Tasa de éxito en contratación</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Lo que dicen nuestros usuarios
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-user-tie text-blue-700"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Carlos Méndez</h4>
+                <p class="text-blue-600">CEO at TechSolutions</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Gracias a TechStarter encontramos a dos desarrolladores junior
+              excepcionales. Su sistema de filtrado por habilidades técnicas nos
+              ahorró mucho tiempo en el proceso de selección."
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-user-graduate text-green-700"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Ana Rodríguez</h4>
+                <p class="text-green-600">Desarrolladora Frontend</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Como recién graduada, estaba preocupada por encontrar mi primera
+              oportunidad. TechStarter me conectó con startups interesantes y
+              conseguí mi primer trabajo en menos de un mes."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">TechStarter</h4>
+            <p class="text-gray-400">
+              Conectando el talento del futuro con las oportunidades de hoy.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Enlaces Rápidos</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Para Empresas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Para Graduados</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Términos y Condiciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Contacto</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                <span class="text-gray-400">info@techstarter.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-2 text-blue-400"></i>
+                <span class="text-gray-400">+34 912 345 678</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                <span class="text-gray-400">Madrid, España</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400">
+            © 2025 TechStarter. Todos los derechos reservados.
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white rounded-lg w-11/12 md:w-1/3 p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-800">Iniciar Sesión</h3>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <form id="loginForm">
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2" for="email"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 mb-2" for="password"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              id="password"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <input type="checkbox" id="remember" class="mr-2" />
+              <label for="remember" class="text-gray-700">Recordarme</label>
+            </div>
+            <a href="#" class="text-blue-600 hover:underline"
+              >¿Olvidaste tu contraseña?</a
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+          >
+            Iniciar Sesión
+          </button>
+        </form>
+
+        <div class="mt-4 text-center">
+          <p class="text-gray-700">
+            ¿No tienes una cuenta?
+            <a href="#" class="text-blue-600 hover:underline">Regístrate</a>
+          </p>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-gray-200">
+          <p class="text-center text-gray-600 mb-2">O inicia sesión con</p>
+          <div class="flex justify-center space-x-4">
+            <button
+              class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button
+              class="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button
+              class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition duration-300"
+            >
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/login.js"></script>
+  </body>
+</html>
