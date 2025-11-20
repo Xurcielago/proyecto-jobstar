@@ -7,7 +7,7 @@ export const Logout = () => {
     event.preventDefault();
 
     try {
-      const fetchLogout = await fetch("http://localhost:5000/api/auth/logout", {
+      const fetchLogout = await fetch("http://localhost:3000/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

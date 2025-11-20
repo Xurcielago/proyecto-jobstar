@@ -8,7 +8,7 @@ export const Home = () => {
   const getUserData = async () => {
     try {
       const fetchUser = await fetch(
-        "http://localhost:5000/api/auth/user/myuser",
+        "http://localhost:3000/api/auth/user/myuser",
         {
           method: "GET",
           credentials: "include",

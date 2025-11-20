@@ -9,7 +9,7 @@ export const SeeMessages = () => {
 
   const getAllMessages = async () => {
     try {
-      const fetchMessages = await fetch("http://localhost:5000/api/messages", {
+      const fetchMessages = await fetch("http://localhost:3000/api/messages", {
         method: "GET",
         credentials: "include",
       });

@@ -23,7 +23,7 @@ export const RegisterCompany = () => {
 
     try {
       const fetchCompany = await fetch(
-        "http://localhost:5000/api/auth/company",
+        "http://localhost:3000/api/auth/company",
         {
           method: "POST",
           body: JSON.stringify(form),

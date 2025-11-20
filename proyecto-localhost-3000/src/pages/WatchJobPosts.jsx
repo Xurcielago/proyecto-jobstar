@@ -20,10 +20,10 @@ export const WatchJobPosts = () => {
   const loadData = async () => {
     try {
       const [typeRes, modRes] = await Promise.all([
-        fetch("http://localhost:5000/api/auth/jobtype", {
+        fetch("http://localhost:3000/api/auth/jobtype", {
           credentials: "include",
         }),
-        fetch("http://localhost:5000/api/auth/modality", {
+        fetch("http://localhost:3000/api/auth/modality", {
           credentials: "include",
         }),
       ]);
@@ -41,7 +41,7 @@ export const WatchJobPosts = () => {
   const getRole = async () => {
     try {
       const fetchUser = await fetch(
-        "http://localhost:5000/api/auth/user/myuser",
+        "http://localhost:3000/api/auth/user/myuser",
         {
           method: "GET",
           credentials: "include",
@@ -62,7 +62,7 @@ export const WatchJobPosts = () => {
 
   const getAllPosts = async () => {
     try {
-      const fetchPosts = await fetch("http://localhost:5000/api/auth/jobpost", {
+      const fetchPosts = await fetch("http://localhost:3000/api/auth/jobpost", {
         method: "GET",
         credentials: "include",
       });
@@ -78,7 +78,7 @@ export const WatchJobPosts = () => {
   const updatePost = async (postID) => {
     try {
       const fetchUpdate = await fetch(
-        `http://localhost:5000/api/auth/jobpost/${postID}`,
+        `http://localhost:3000/api/auth/jobpost/${postID}`,
         {
           method: "PUT",
           body: JSON.stringify(form),

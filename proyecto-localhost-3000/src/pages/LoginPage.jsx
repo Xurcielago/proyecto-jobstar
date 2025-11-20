@@ -16,7 +16,7 @@ export const Login = () => {
     event.preventDefault();
 
     try {
-      const fetchLogin = await fetch("http://localhost:5000/api/auth/login", {
+      const fetchLogin = await fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {

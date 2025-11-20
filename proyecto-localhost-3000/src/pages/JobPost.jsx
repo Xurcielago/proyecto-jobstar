@@ -20,10 +20,10 @@ export const JobPost = () => {
   const loadData = async () => {
     try {
       const [typeRes, modRes] = await Promise.all([
-        fetch("http://localhost:5000/api/auth/jobtype", {
+        fetch("http://localhost:3000/api/auth/jobtype", {
           credentials: "include",
         }),
-        fetch("http://localhost:5000/api/auth/modality", {
+        fetch("http://localhost:3000/api/auth/modality", {
           credentials: "include",
         }),
       ]);
@@ -48,7 +48,7 @@ export const JobPost = () => {
 
     try {
       const fetchJobPost = await fetch(
-        "http://localhost:5000/api/auth/jobpost",
+        "http://localhost:3000/api/auth/jobpost",
         {
           method: "POST",
           body: JSON.stringify(form),

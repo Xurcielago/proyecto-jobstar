@@ -26,13 +26,13 @@ export const RegisterGraduated = () => {
   const loadData = async () => {
     try {
       const [specRes, jobRes, jobTypeRes] = await Promise.all([
-        fetch("http://localhost:5000/api/auth/specialization", {
+        fetch("http://localhost:3000/api/auth/specialization", {
           credentials: "include",
         }),
-        fetch("http://localhost:5000/api/auth/wantedjob", {
+        fetch("http://localhost:3000/api/auth/wantedjob", {
           credentials: "include",
         }),
-        fetch("http://localhost:5000/api/auth/jobtype", {
+        fetch("http://localhost:3000/api/auth/jobtype", {
           credentials: "include",
         }),
       ]);
@@ -64,7 +64,7 @@ export const RegisterGraduated = () => {
 
     try {
       const fetchGraduated = await fetch(
-        "http://localhost:5000/api/auth/jobseeker",
+        "http://localhost:3000/api/auth/jobseeker",
         {
           method: "POST",
           body: JSON.stringify(form),

@@ -7,7 +7,7 @@ export const CompanyProfile = () => {
   const getCurrentProfile = async () => {
     try {
       const fetchProfile = await fetch(
-        "http://localhost:5000/api/auth/mycompany",
+        "http://localhost:3000/api/auth/mycompany",
         {
           method: "GET",
           credentials: "include",

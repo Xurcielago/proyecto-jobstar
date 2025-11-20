@@ -14,7 +14,7 @@ export const SendMessage = () => {
 
   const loadData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/company", {
+      const response = await fetch("http://localhost:3000/api/auth/company", {
         method: "GET",
         credentials: "include",
       });
@@ -106,7 +106,7 @@ export const SendMessage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/messages", {
+      const response = await fetch("http://localhost:3000/api/messages", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {

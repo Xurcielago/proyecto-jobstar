@@ -7,7 +7,7 @@ export const GraduatedProfile = () => {
   const getCurrentProfile = async () => {
     try {
       const fetchProfile = await fetch(
-        "http://localhost:5000/api/auth/profile",
+        "http://localhost:3000/api/auth/profile",
         {
           method: "GET",
           credentials: "include",
