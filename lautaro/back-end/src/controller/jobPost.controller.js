@@ -11,6 +11,7 @@ export const createdJobPost = async (req, res) => {
       modality_id: modality_id,
     });
     console.log(Create);
+    console.log(Create.modality_id)
     res.status(201).json({ Create, msg: "Trabajo creado exitosamente" });
   } catch (error) {
     return res.status(500).json({ error: error.message });
