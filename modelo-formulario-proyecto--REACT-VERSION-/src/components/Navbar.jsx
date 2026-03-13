@@ -28,7 +28,7 @@ export const Navbar = () => {
           <Link to="/mymessages">Mis mensajes</Link>
         </li>
         <li>
-          <Link to="/graduatedprofile">Perfil</Link>
+          <Link to="/profile">Perfil</Link>
         </li>
         <Logout />
       </ul>
