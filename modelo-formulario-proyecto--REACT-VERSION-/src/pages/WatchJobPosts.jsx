@@ -31,6 +31,7 @@ export const WatchJobPosts = () => {
       const types = await typeRes.json();
       const mods = await modRes.json();
 
+      
       setJobTypes(types.getAll);
       setModalities(mods.getAll);
     } catch (error) {
@@ -297,14 +298,14 @@ export const WatchJobPosts = () => {
               const currentModality = modalities.find(
                 (m) => m.id === job.modality_id
               );
-
+              console.log(job.modality_id)
               return (
                 <div key={job.id} className="job-card">
                   <div className="job-header">
                     <h3 className="job-title">{job.job_name}</h3>
                     <div className="job-company">
                       <strong>Compañía:</strong>{" "}
-                      {job.company ? job.company.company_name : "Sin compañía"}
+                      {job.company_id ? job.company_id.company_name : "Sin compañía"}
                     </div>
                   </div>
 
