@@ -6,18 +6,6 @@ import cookieParser from "cookie-parser";
 
 import { routes } from "./back-end/src/routes/index.js";
 
-//TEST//
-import { BusinessOwnerModel } from "./back-end/src/models/businessOwner.model.js";
-import { JobPostModel } from "./back-end/src/models/jobPost.model.js";
-import { Job_Tag_Model } from "./back-end/src/models/job_tag.model.js";
-import { JobSeekerProfileModel } from "./back-end/src/models/jobSeekerProfile.models.js";
-import { JobTypeModel } from "./back-end/src/models/jobType.model.js";
-import { ModalityModel } from "./back-end/src/models/modality.model.js";
-import { SpecializationModel } from "./back-end/src/models/specialization.model.js";
-import { TagModel } from "./back-end/src/models/tag.model.js";
-import { UserModel } from "./back-end/src/models/user.model.js";
-import { WantedJobModel } from "./back-end/src/models/wantedJob.model.js";
-
 const app = express();
 const PORT = process.env.PORT;
 const corsOptions = {

@@ -59,6 +59,8 @@ export const JobPost = () => {
         }
       );
 
+      console.log(fetchJobPost)
+
       if (!fetchJobPost.ok) {
         console.log("Error al realizar el fetch");
         alert("Error al crear la oferta laboral");

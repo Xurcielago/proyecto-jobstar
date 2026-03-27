@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../hooks/useForm.js";
 
 export const RegisterGeneral = () => {
   const navigate = useNavigate();
@@ -24,6 +24,8 @@ export const RegisterGeneral = () => {
           credentials: "include",
         }
       );
+
+      console.log(fetchRegister)
 
       if (!fetchRegister.ok) {
         console.log("Error al hacer fetch");
